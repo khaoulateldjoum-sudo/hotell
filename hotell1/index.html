@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>رحلتك — فنادق وهران</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav>
+<div class="logo" onclick="go('home')">✈️ رحل<span>تك</span></div>
+
+<ul>
+<li><a onclick="go('home')" id="n-home">الرئيسية</a></li>
+<li><a onclick="go('hotels')" id="n-hotels">الفنادق</a></li>
+<li><a onclick="go('profile')" id="n-profile">ملفي</a></li>
+</ul>
+<div class="nb">
+<button class="btn bh" onclick="go('login')">دخول</button>
+<button class="btn bg" onclick="go('signup')">سجّل مجاناً</button>
+</div>
+</nav>
+<!-- الرئيسية -->
+<div id="page-home" class="page active">
+<section class="hero">
+<h1>فنادق <span>وهران</span><br/>من منزلك</h1>
+<p>ابحث في أفضل فنادق وهران، قارن الأسعار، واحجز بضغطة واحدة.</p>
+
+<div class="sts">
+<div class="st"><div class="st-n">6</div><div class="st-l">فندق</div></div>
+<div class="st"><div class="st-n">وهران</div><div class="st-l">الوجهة</div></div>
+<div class="st"><div class="st-n">4.7<span>⭐</span></div><div class="st-l">تقييم</div></div>
+<div class="st"><div class="st-n">🆓</div><div class="st-l">إلغاء مجاني</div></div>
+</div>
+</section>
+<div class="sec">
+<div class="sec-h"><h2>فنادق <span>مميزة</span></h2><button class="btn bh" onclick="go('hotels')">عرض الكل ←</button></div>
+<div class="hg">
+<div class="hc"><div class="hi"><img src="photo/img1.jpg" alt="ريادة بالاس"><span class="hbg">5 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">ريادة بالاس</div><div class="hp">6,200 <span>دج/ليلة</span></div></div><div class="hl">📍 الكورنيش</div><div class="hs">⭐⭐⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.9 (198)</span><button class="hbtn" onclick="openBk('ريادة بالاس','الكورنيش','6200','photo/img1.jpg')">احجز</button></div></div></div>
+<div class="hc"><div class="hi"><img src="photo/img2.jpg" alt="لو مريديان"><span class="hbg">4 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">لو مريديان</div><div class="hp">4,800 <span>دج/ليلة</span></div></div><div class="hl">📍 المرسى</div><div class="hs">⭐⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.6 (134)</span><button class="hbtn" onclick="openBk('لو مريديان','المرسى','4800','photo/img2.jpg')">احجز</button></div></div></div>
+<div class="hc"><div class="hi"><img src="photo/img3.jpg" alt="فندق الشاطئ"><span class="hbg">3 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">فندق الشاطئ</div><div class="hp">3,200 <span>دج/ليلة</span></div></div><div class="hl">📍 الأندلس</div><div class="hs">⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.2 (87)</span><button class="hbtn" onclick="openBk('فندق الشاطئ','الأندلس','3200','photo/img3.jpg')">احجز</button></div></div></div>
+</div>
+</div>
+<div class="cta">
+<h2>رحلتك القادمة <span>تبدأ هنا</span></h2>
+<p>سجّل واحجز فندقك في وهران بأفضل الأسعار</p>
+<button class="btn bg bf" style="max-width:180px;margin:0 auto;display:block" onclick="go('signup')">إنشاء حساب مجاناً</button>
+</div>
+<footer>
+<div><div style="font-size:.96rem;font-weight:700;margin-bottom:8px">✈️ رحل<span style="color:var(--gold)">تك</span></div><p style="font-size:.72rem;color:var(--mu);line-height:1.8">منصة حجز فنادق وهران.</p></div>
+<div><div class="ft">الفنادق</div><ul class="fl"><li><a onclick="go('hotels')">كل الفنادق</a></li><li><a onclick="go('hotels')">5 نجوم</a></li><li><a onclick="go('hotels')">3 نجوم</a></li></ul></div>
+<div><div class="ft">الحساب</div><ul class="fl"><li><a onclick="go('login')">تسجيل الدخول</a></li><li><a onclick="go('signup')">إنشاء حساب</a></li><li><a onclick="go('profile')">حجوزاتي</a></li></ul></div>
+<div><div class="ft">مساعدة</div><ul class="fl"><li><a>عن المنصة</a></li><li><a>تواصل معنا</a></li><li><a>الإلغاء</a></li></ul></div>
+<div class="fc"><span>© 2025 رحلتك 🇩🇿</span><span>وهران ❤️</span></div>
+</footer>
+</div>
+<!-- تسجيل الدخول -->
+<div id="page-login" class="page">
+<div class="auth">
+<div class="auth-l">
+<div><div style="font-size:1rem;font-weight:700;margin-bottom:28px;cursor:pointer" onclick="go('home')">✈️ رحل<span style="color:var(--gold)">تك</span></div><h2>احجز فندقك<br/><span>من منزلك</span></h2><p>أفضل فنادق وهران بأسعار مضمونة وحجز فوري.</p><ul class="al-li"><li>ضمان أفضل سعر</li><li>تأكيد فوري</li><li>إلغاء مجاني</li><li>دفع آمن</li></ul></div>
+<div class="auth-foot">© 2025 رحلتك</div>
+</div>
+<div class="auth-r">
+<div class="aform">
+<h2>أهلاً بعودتك 👋</h2>
+<p class="sub">ليس لديك حساب؟ <span onclick="go('signup')">سجّل مجاناً</span></p>
+<div id="l-al" class="al"></div>
+<div class="f"><label>البريد الإلكتروني</label><input type="email" id="l-em" placeholder=""/></div>
+<div class="f"><label>كلمة المرور</label><input type="password" id="l-pw" placeholder="••••••••"/></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+<label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:.74rem;color:var(--mu)"><input type="checkbox" style="accent-color:var(--gold)"/> تذكرني</label>
+<span style="font-size:.74rem;color:var(--gold);cursor:pointer" onclick="go('forgot')">نسيت كلمة المرور؟</span>
+</div>
+<button class="btn bg bf" onclick="doLogin()">تسجيل الدخول</button>
+</div>
+</div>
+</div>
+</div>
+<!-- إنشاء حساب -->
+<div id="page-signup" class="page">
+<div class="auth">
+<div class="auth-l">
+<div><div style="font-size:1rem;font-weight:700;margin-bottom:28px;cursor:pointer" onclick="go('home')">✈️ رحل<span style="color:var(--gold)">تك</span></div><h2>انضم إلى<br/><span>50,000+ مسافر</span></h2><p>سجّل مجاناً واحجز فندقك فوراً.</p><ul class="al-li"><li>تسجيل مجاني</li><li>حجز فوري</li><li>تتبع حجوزاتك</li></ul></div>
+<div class="auth-foot">© 2025 رحلتك</div>
+</div>
+<div class="auth-r">
+<div class="aform">
+<h2>إنشاء حساب جديد</h2>
+<p class="sub">عندك حساب؟ <span onclick="go('login')">سجّل دخولك</span></p>
+<div id="su-al" class="al"></div>
+<div class="g2">
+<div class="f"><label>الاسم الأول</label><input type="text" id="su-fn" placeholder=""/></div>
+<div class="f"><label>اللقب</label><input type="text" id="su-ln" placeholder=""/></div>
+</div>
+<div class="f"><label>البريد الإلكتروني</label><input type="email" id="su-em" placeholder=""/></div>
+<div class="f"><label>كلمة المرور</label>
+<input type="password" id="su-pw" placeholder="••••••••" oninput="pwStr(this.value)"/>
+<div style="height:3px;background:var(--bd);border-radius:2px;margin-top:5px;overflow:hidden"><div id="pw-b" style="height:100%;width:0;border-radius:2px;transition:width .3s,background .3s"></div></div>
+</div>
+<label style="display:flex;align-items:flex-start;gap:8px;margin-bottom:14px;cursor:pointer;font-size:.72rem;color:var(--mu)">
+<input type="checkbox" id="su-tc" style="accent-color:var(--gold);margin-top:2px"/> أوافق على <span style="color:var(--gold)">شروط الاستخدام</span>
+</label>
+<button class="btn bg bf" onclick="doSignup()">إنشاء الحساب</button>
+</div>
+</div>
+</div>
+</div>
+<!-- نسيت كلمة المرور -->
+<div id="page-forgot" class="page">
+<div class="fg">
+<div class="fgc">
+<span class="bk" onclick="go('login')">← العودة للدخول</span>
+<div class="dots"><div class="dot on" id="d1"></div><div class="dot" id="d2"></div><div class="dot" id="d3"></div></div>
+<div class="fgi" id="fi">🔑</div>
+<h2 id="ft">نسيت كلمة المرور؟</h2>
+<p id="fp">أدخل بريدك وسنرسل لك رمز التحقق.</p>
+<div id="fs1"><div class="f"><label>البريد الإلكتروني</label><input type="email" id="f-em" placeholder=""/></div><button class="btn bg bf" onclick="fGo2()">إرسال الرمز</button></div>
+<div id="fs2" style="display:none"><label style="display:block;font-size:.67rem;font-weight:600;color:var(--mu);margin-bottom:6px">الرمز المرسل</label><div class="cr"><input class="ci" maxlength="1" oninput="nxt(this,0)"/><input class="ci" maxlength="1" oninput="nxt(this,1)"/><input class="ci" maxlength="1" oninput="nxt(this,2)"/><input class="ci" maxlength="1" oninput="nxt(this,3)"/></div><button class="btn bg bf" onclick="fGo3()">تأكيد</button></div>
+<div id="fs3" style="display:none"><div class="f"><label>كلمة المرور الجديدة</label><input type="password" placeholder="••••••••"/></div><div class="f"><label>تأكيد كلمة المرور</label><input type="password" placeholder="••••••••"/></div><button class="btn bg bf" onclick="fDone()">تغيير</button></div>
+<div id="fs4" style="display:none;text-align:center"><div style="font-size:2.5rem;margin-bottom:11px">✅</div><h3 style="font-size:1.1rem;font-weight:700;margin-bottom:5px">تم بنجاح!</h3><p style="font-size:.76rem;color:var(--mu);margin-bottom:16px">يمكنك الآن تسجيل الدخول.</p><button class="btn bg bf" onclick="go('login')">تسجيل الدخول</button></div>
+</div>
+</div>
+</div>
+<!-- قائمة الفنادق -->
+<div id="page-hotels" class="page" style="padding-top:52px">
+<div class="strip"><div><h2>فنادق وهران</h2><p>فلتر حسب الفئة</p></div></div>
+<div class="filt">
+<span class="fl2">الفئة:</span>
+<div class="fg" id="sg">
+<button class="fb on" data-f="all" onclick="setF(this)">الكل</button>
+<button class="fb" data-f="5" onclick="setF(this)">⭐⭐⭐⭐⭐</button>
+<button class="fb" data-f="4" onclick="setF(this)">⭐⭐⭐⭐</button>
+<button class="fb" data-f="3" onclick="setF(this)">⭐⭐⭐</button>
+</div>
+</div>
+<div class="hcont">
+<div style="font-size:.67rem;color:var(--mu);margin-bottom:10px">النتائج <span id="hc" style="color:var(--gold)"></span></div>
+<div class="hg" id="hgrid">
+<div class="hc" data-s="5" data-n="ريادة بالاس"><div class="hi"><img src="photo/img1.jpg" alt="ريادة بالاس"><span class="hbg">5 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">ريادة بالاس</div><div class="hp">6,200 <span>دج/ليلة</span></div></div><div class="hl">📍 الكورنيش</div><div class="hs">⭐⭐⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.9 (198)</span><button class="hbtn" onclick="openBk('ريادة بالاس','الكورنيش','6200','photo/img1.jpg')">احجز</button></div></div></div>
+<div class="hc" data-s="5" data-n="هيلتون وهران"><div class="hi"><img src="photo/img4.jpg" alt="هيلتون وهران"><span class="hbg">5 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">هيلتون وهران</div><div class="hp">7,500 <span>دج/ليلة</span></div></div><div class="hl">📍 وسط المدينة</div><div class="hs">⭐⭐⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.8 (220)</span><button class="hbtn" onclick="openBk('هيلتون وهران','وسط المدينة','7500','photo/img4.jpg')">احجز</button></div></div></div>
+<div class="hc" data-s="4" data-n="لو مريديان"><div class="hi"><img src="photo/img2.jpg" alt="لو مريديان"><span class="hbg">4 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">لو مريديان</div><div class="hp">4,800 <span>دج/ليلة</span></div></div><div class="hl">📍 المرسى</div><div class="hs">⭐⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.6 (134)</span><button class="hbtn" onclick="openBk('لو مريديان','المرسى','4800','photo/img2.jpg')">احجز</button></div></div></div>
+<div class="hc" data-s="4" data-n="فندق الأمير"><div class="hi"><img src="photo/img5.jpg" alt="فندق الأمير"><span class="hbg">4 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">فندق الأمير</div><div class="hp">4,200 <span>دج/ليلة</span></div></div><div class="hl">📍 حي الصنوبر</div><div class="hs">⭐⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.4 (96)</span><button class="hbtn" onclick="openBk('فندق الأمير','الصنوبر','4200','photo/img5.jpg')">احجز</button></div></div></div>
+<div class="hc" data-s="3" data-n="فندق الشاطئ"><div class="hi"><img src="photo/img3.jpg" alt="فندق الشاطئ"><span class="hbg">3 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">فندق الشاطئ</div><div class="hp">3,200 <span>دج/ليلة</span></div></div><div class="hl">📍 الأندلس</div><div class="hs">⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.2 (87)</span><button class="hbtn" onclick="openBk('فندق الشاطئ','الأندلس','3200','photo/img3.jpg')">احجز</button></div></div></div>
+<div class="hc" data-s="3" data-n="فندق البحر"><div class="hi"><img src="photo/img6.jpg" alt="فندق البحر"><span class="hbg">3 ⭐</span></div><div class="hb"><div class="ht"><div class="hn">فندق البحر</div><div class="hp">2,800 <span>دج/ليلة</span></div></div><div class="hl">📍 الميناء</div><div class="hs">⭐⭐⭐</div><div class="hf"><span class="hr">⭐ 4.0 (63)</span><button class="hbtn" onclick="openBk('فندق البحر','الميناء','2800','photo/img6.jpg')">احجز</button></div></div></div>
+</div>
+<div class="nr" id="nr">🔍 لا توجد نتائج</div>
+</div>
+</div>
+<!-- الحجز -->
+<div id="page-booking" class="page" style="padding-top:52px">
+<div style="background:var(--card);border-bottom:1px solid var(--bd);padding:12px 32px"><span style="font-size:.75rem;color:var(--mu);cursor:pointer" onclick="go('hotels')">← العودة للفنادق</span></div>
+<div class="bw">
+<div class="bform">
+<h3>📋 تفاصيل الحجز</h3>
+<div id="bk-al" class="al"></div>
+<div class="g2"><div class="f"><label>الاسم الأول</label><input type="text" id="bk-fn" placeholder=""/></div><div class="f"><label>اللقب</label><input type="text" id="bk-ln" placeholder=""/></div></div>
+<div class="f"><label>البريد الإلكتروني</label><input type="email" id="bk-em" placeholder=""/></div>
+<div class="f"><label>رقم الهاتف</label><input type="tel" id="bk-ph" placeholder="+213 5XX XXX XXX"/></div>
+<div class="g2"><div class="f"><label>تاريخ الوصول</label><input type="date" id="bk-ci" oninput="calc()"/></div><div class="f"><label>تاريخ المغادرة</label><input type="date" id="bk-co" oninput="calc()"/></div></div>
+<div class="g2"><div class="f"><label>نوع الغرفة</label><select><option>غرفة عادية</option><option>غرفة مزدوجة</option><option>جناح فاخر</option></select></div><div class="f"><label>عدد الأشخاص</label><select><option>1 شخص</option><option>2 شخصان</option><option>3 أشخاص</option></select></div></div>
+<div class="f"><label>طلبات خاصة</label><textarea placeholder="مثال: غرفة في الطابق العلوي..."></textarea></div>
+<div style="font-size:.67rem;font-weight:600;color:var(--mu);margin-bottom:7px">طريقة الدفع</div>
+<div class="po"><label><input type="radio" name="pay" checked style="accent-color:var(--gold)"/> 💵 عند الوصول</label><label><input type="radio" name="pay" style="accent-color:var(--gold)"/> 💳 بطاقة بنكية</label></div>
+<button class="btn bg bf" onclick="confirmBk()">✅ تأكيد الحجز</button>
+</div>
+<div class="bs">
+<img id="bs-i" src="" alt="hotel icon" style="width:100px; height:100px; object-fit:cover; border-radius:9px;">
+<div class="bs-b">
+<div class="bs-n" id="bs-n">الفندق</div><div class="bs-l" id="bs-l">📍 وهران</div>
+<div class="br"><span>تاريخ الوصول</span><span id="bs-ci">—</span></div>
+<div class="br"><span>تاريخ المغادرة</span><span id="bs-co">—</span></div>
+<div class="br"><span>عدد الليالي</span><span id="bs-ni">—</span></div>
+<div class="br"><span>السعر/ليلة</span><span id="bs-pr">—</span></div>
+<div class="br tot"><span style="font-weight:700;color:var(--tx)">الإجمالي</span><span id="bs-tot">—</span></div>
+</div>
+<div class="bs-f">🔒 حجز آمن ومضمون</div>
+</div>
+</div>
+</div>
+<!-- تأكيد الحجز -->
+<div id="page-confirmed" class="page">
+<div class="cw">
+<div class="cc">
+<div class="ic">🎉</div>
+<h2>تم الحجز بنجاح!</h2>
+<p>تم إرسال التأكيد إلى بريدك. نتمنى لك إقامة ممتعة في وهران! 🌊</p>
+<div class="cd">
+<div class="cdr"><span>الفندق</span><span id="cf-h">—</span></div>
+<div class="cdr"><span>الموقع</span><span id="cf-l">—</span></div>
+<div class="cdr"><span>رقم الحجز</span><span class="cn">#RH2025-<span id="cf-n">0000</span></span></div>
+</div>
+<div style="display:flex;gap:8px"><button class="btn bh" style="flex:1" onclick="go('profile')">حجوزاتي</button><button class="btn bg" style="flex:1" onclick="go('home')">الرئيسية</button></div>
+</div>
+</div>
+</div>
+<!-- البروفايل -->
+<div id="page-profile" class="page" style="padding-top:52px">
+<div class="pw">
+<div class="ph">
+<div style="position:relative;cursor:pointer" onclick="document.getElementById('pavF').click()">
+<div class="pav" id="p-av">👤</div><div class="pe">✏️</div>
+</div>
+<input type="file" id="pavF" accept="image/*" style="display:none"/>
+<div style="flex:1">
+<div class="pn"> </div>
+<div class="pm"> </div>
+<div class="ptgs"><span class="pt">✓ موثق</span><span class="pt" style="color:var(--gold)">✈️ نشيط</span></div>
+</div>
+<button class="btn bh" style="font-size:.72rem" onclick="document.getElementById('p-edit').scrollIntoView({behavior:'smooth'})">تعديل</button>
+</div>
+<div class="pss">
+<div class="ps"><div class="ps-n">0</div><div class="ps-l">حجز كلي</div></div>
+<div class="ps"><div class="ps-n">0</div><div class="ps-l">قادم</div></div>
+<div class="ps"><div class="ps-n">0</div><div class="ps-l">دج أُنفق</div></div>
+<div class="ps"><div class="ps-n">—</div><div class="ps-l">تقييم</div></div>
+</div>
+<div class="pg2">
+
+<div class="pc" id="p-edit">
+<h3>تعديل البيانات</h3>
+<div class="g2"><div class="f"><label>الاسم الأول</label><input type="text" placeholder=""/></div><div class="f"><label>اللقب</label><input type="text" placeholder=""/></div></div>
+<div class="f"><label>البريد الإلكتروني</label><input type="email" placeholder=""/></div>
+<div class="f"><label>كلمة مرور جديدة</label><input type="password" placeholder="اتركه فارغاً للإبقاء"/></div>
+<button class="btn bg" onclick="savePro(this)">حفظ التغييرات</button>
+</div>
+<div class="pc">
+<h3>الفنادق المفضلة</h3>
+<div class="row"><div class="ri">🏰</div><div style="flex:1"><div class="rn">ريادة بالاس</div><div class="rd">الكورنيش · ⭐⭐⭐⭐⭐</div></div><button class="hbtn" onclick="go('hotels')">احجز</button></div>
+<div class="row"><div class="ri">🌊</div><div style="flex:1"><div class="rn">لو مريديان</div><div class="rd">المرسى · ⭐⭐⭐⭐</div></div><button class="hbtn" onclick="go('hotels')">احجز</button></div>
+<div class="row"><div class="ri">🏨</div><div style="flex:1"><div class="rn">هيلتون وهران</div><div class="rd">وسط المدينة · ⭐⭐⭐⭐⭐</div></div><button class="hbtn" onclick="go('hotels')">احجز</button></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+/* التنقل بين الصفحات */
+function go(name) {
+document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+document.getElementById('page-' + name).classList.add('active');
+document.querySelectorAll('nav a').forEach(a => a.classList.remove('on'));
+const el = document.getElementById('n-' + name);
+if (el) el.classList.add('on');
+window.scrollTo(0, 0);
+}
+/* رسالة تنبيه */
+function showAl(id, msg, t) { const el = document.getElementById(id); el.textContent = msg; el.className = 'al ' + t; }
+/* تسجيل الدخول */
+function doLogin() {
+const em = document.getElementById('l-em').value, pw = document.getElementById('l-pw').value;
+if (!em || !pw) { showAl('l-al', 'يرجى ملء جميع الحقول', 'er'); return; }
+showAl('l-al', '✓ تم تسجيل الدخول!', 'ok');
+setTimeout(() => go('profile'), 1400);
+}
+/* إنشاء الحساب */
+function doSignup() {
+const fn = document.getElementById('su-fn').value, em = document.getElementById('su-em').value;
+const pw = document.getElementById('su-pw').value, tc = document.getElementById('su-tc').checked;
+if (!fn || !em || !pw) { showAl('su-al', 'يرجى ملء جميع الحقول', 'er'); return; }
+if (!tc) { showAl('su-al', 'يجب الموافقة على الشروط', 'er'); return; }
+showAl('su-al', '✓ تم إنشاء الحساب!', 'ok');
+setTimeout(() => go('profile'), 1400);
+}
+/* قوة كلمة المرور */
+function pwStr(v) {
+let s = 0;
+if (v.length >= 6) s++; if (v.length >= 10) s++;
+if (/[A-Z]/.test(v)) s++; if (/[0-9]/.test(v)) s++; if (/[^a-zA-Z0-9]/.test(v)) s++;
+const b = document.getElementById('pw-b');
+b.style.width = [0,20,40,65,85,100][s] + '%';
+b.style.background = ['#2A2D33','#e05c5c','#e09a2a','#eab308','#3fcf8e','#22a36e'][s];
+}
+/* مراحل نسيت كلمة المرور */
+function fGo2() {
+const em = document.getElementById('f-em').value; if (!em) return;
+document.getElementById('fs1').style.display = 'none';
+document.getElementById('fs2').style.display = 'block';
+document.getElementById('fi').textContent = '📧';
+document.getElementById('ft').textContent = 'تحقق من بريدك';
+document.getElementById('fp').textContent = 'أرسلنا الرمز إلى ' + em;
+document.getElementById('d2').classList.add('on');
+}
+function fGo3() {
+document.getElementById('fs2').style.display = 'none';
+document.getElementById('fs3').style.display = 'block';
+document.getElementById('fi').textContent = '🔐';
+document.getElementById('ft').textContent = 'كلمة مرور جديدة';
+document.getElementById('fp').textContent = 'اختر كلمة مرور قوية.';
+document.getElementById('d3').classList.add('on');
+}
+function fDone() {
+['fs3','fi','ft','fp'].forEach(id => document.getElementById(id).style.display = 'none');
+document.getElementById('fs4').style.display = 'block';
+document.querySelector('.dots').style.display = 'none';
+}
+/* رمز التحقق */
+const codes = document.querySelectorAll('.ci');
+function nxt(el, i) { if (el.value && i < 3) codes[i+1].focus(); }
+/* فلتر الفنادق */
+let fS = 'all';
+function setF(btn) {
+document.querySelectorAll('#sg .fb').forEach(b => b.classList.remove('on'));
+btn.classList.add('on'); fS = btn.dataset.f; applyF();
+}
+function applyF() {
+let n = 0;
+document.querySelectorAll('.hc').forEach(c => {
+const ok = (fS === 'all' || c.dataset.s === fS);
+c.style.display = ok ? 'block' : 'none'; if (ok) n++;
+});
+document.getElementById('hc').textContent = n > 0 ? '(' + n + ')' : '';
+document.getElementById('nr').style.display = n === 0 ? 'block' : 'none';
+}
+/* فتح صفحة الحجز */
+let price = 0;
+function openBk(name, loc, pr, icon) {
+price = parseInt(pr);
+document.getElementById('bs-i').src = icon;
+document.getElementById('bs-n').textContent = name;
+document.getElementById('bs-l').textContent = '📍 ' + loc + ' — وهران';
+document.getElementById('bs-pr').textContent = pr + ' دج';
+go('booking');
+}
+/* حساب الإجمالي */
+function calc() {
+const ci = document.getElementById('bk-ci').value, co = document.getElementById('bk-co').value;
+if (!ci || !co) return;
+const n = Math.round((new Date(co) - new Date(ci)) / 86400000);
+if (n <= 0) return;
+document.getElementById('bs-ci').textContent = ci;
+document.getElementById('bs-co').textContent = co;
+document.getElementById('bs-ni').textContent = n + ' ليلة';
+document.getElementById('bs-tot').textContent = (n * price).toLocaleString() + ' دج';
+}
+/* تأكيد الحجز */
+function confirmBk() {
+const fn = document.getElementById('bk-fn').value, em = document.getElementById('bk-em').value;
+const ci = document.getElementById('bk-ci').value, co = document.getElementById('bk-co').value;
+if (!fn || !em || !ci || !co) { showAl('bk-al', 'يرجى ملء جميع الحقول', 'er'); return; }
+document.getElementById('cf-h').textContent = document.getElementById('bs-n').textContent;
+document.getElementById('cf-l').textContent = document.getElementById('bs-l').textContent;
+document.getElementById('cf-n').textContent = Math.floor(Math.random() * 9000 + 1000);
+go('confirmed');
+}
+/* حفظ البروفايل */
+function savePro(btn) {
+const orig = btn.textContent; btn.textContent = 'جاري الحفظ...'; btn.style.opacity = '.7';
+setTimeout(() => { btn.textContent = '✓ تم!'; btn.style.background = 'var(--gr)'; btn.style.opacity = '1';
+setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 1800); }, 900);
+}
+applyF();
+</script>
+</body>
+</html>
